@@ -1,5 +1,8 @@
+from .models import Payment
 from rest_framework import serializers
 
+
 class PaymentSerializer(serializers.Serializer):
-    amount = serializers.IntegerField()
-    phone_number = serializers.CharField(max_length=11)
+    class Meta:
+        model = Payment
+        fields = ['amount', 'phone_number']

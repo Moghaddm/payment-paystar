@@ -1,0 +1,1 @@
+from .views import UserViewSetfrom rest_framework.routers import SimpleRouter, DefaultRouterfrom django.urls import path, includerouter = DefaultRouter()router.register(r'users', UserViewSet, basename='User')# urlpatterns = router.routesurlpatterns = [    path('', include(router.urls))]
