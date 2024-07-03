@@ -35,9 +35,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'pay_star',
     'account',
-    'rest_framework'
+    'rest_framework_swagger',
+    'rest_framework',
+    # 'agenda.apps.AgendaConfig',
+
+    'drf_yasg'
 ]
 
 MIDDLEWARE = [
@@ -80,6 +85,13 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+    ]
 }
 
 # Password validation

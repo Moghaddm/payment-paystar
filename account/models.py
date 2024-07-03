@@ -5,8 +5,8 @@ from django.db import models
 # Create your models here.
 
 
-class User(AbstractBaseUser):
-    username = models.CharField(max_length=20)
+class User(AbstractUser):
+    # username = models.CharField(max_length=20)
     phone_number = models.CharField(max_length=11, unique=True)
     full_name = models.CharField(max_length=50)
     email = models.CharField(max_length=100)
