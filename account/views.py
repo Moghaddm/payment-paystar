@@ -11,7 +11,7 @@ from rest_framework.response import Response
 
 
 class UserViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     # authentication_classes = BasicAuthentication
     queryset = User.objects.all()
     serializer_class = UserSerializer
